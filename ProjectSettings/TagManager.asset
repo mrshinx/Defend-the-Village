@@ -1,0 +1,66 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - Arrow
+  - Monster
+  - AoE
+  - Tower Indexer
+  - Loot Manager
+  - Resource Manager
+  - Tower Image
+  - Tower Selector
+  - Tower Name
+  - Tower EXP
+  - Tower Level Text
+  - Tower Damage Text
+  - Tower Attack Speed Text
+  - Tower Crit Chance Text
+  - Tower Crit Multi Text
+  - Tooltip
+  - Tower Mana Text
+  - Tooltip Monster
+  - Tooltip Passives
+  - Tower
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - Monster
+  - Tower
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: Top
+    uniqueID: 2693308807
+    locked: 0
