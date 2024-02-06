@@ -1,50 +1,132 @@
 fileFormatVersion: 2
 guid: eb1c52f26145ee3409a4d2746392f063
 TextureImporter:
-  fileIDToRecycleName:
-    21300000: Bandit Death_0
-    21300002: Bandit Death_1
-    21300004: Bandit Death_2
-    21300006: Bandit Death_3
-    21300008: Bandit Death_4
-    21300010: Bandit Death_5
-    21300012: Bandit Death_6
-    21300014: Bandit Death_7
-    21300016: Bandit Death_8
-    21300018: Bandit Death_9
-    21300020: Bandit Death_10
-    21300022: Bandit Death_11
-    21300024: Bandit Death_12
-    21300026: Bandit Death_13
-    21300028: Bandit Death_14
-    21300030: Bandit Death_15
-    21300032: Bandit Death_16
-    21300034: Bandit Death_17
-    21300036: Bandit Death_18
-    21300038: Bandit Death_19
-    21300040: Bandit Death_20
-    21300042: Bandit Death_21
-    21300044: Bandit Death_22
-    21300046: Bandit Death_23
-    21300048: Bandit Death_24
-    21300050: Bandit Death_25
-    21300052: Bandit Death_26
-    21300054: Bandit Death_27
-    21300056: Bandit Death_28
-    21300058: Bandit Death_29
-    21300060: Bandit Death_30
-    21300062: Bandit Death_31
-    21300064: Bandit Death_32
-    21300066: Bandit Death_33
-    21300068: Bandit Death_34
-    21300070: Bandit Death_35
-    21300072: Bandit Death_36
-    21300074: Bandit Death_37
-    21300076: Bandit Death_38
-    21300078: Bandit Death_39
-    21300080: Bandit Death_40
+  internalIDToNameTable:
+  - first:
+      213: 21300000
+    second: Bandit Death_0
+  - first:
+      213: 21300002
+    second: Bandit Death_1
+  - first:
+      213: 21300004
+    second: Bandit Death_2
+  - first:
+      213: 21300006
+    second: Bandit Death_3
+  - first:
+      213: 21300008
+    second: Bandit Death_4
+  - first:
+      213: 21300010
+    second: Bandit Death_5
+  - first:
+      213: 21300012
+    second: Bandit Death_6
+  - first:
+      213: 21300014
+    second: Bandit Death_7
+  - first:
+      213: 21300016
+    second: Bandit Death_8
+  - first:
+      213: 21300018
+    second: Bandit Death_9
+  - first:
+      213: 21300020
+    second: Bandit Death_10
+  - first:
+      213: 21300022
+    second: Bandit Death_11
+  - first:
+      213: 21300024
+    second: Bandit Death_12
+  - first:
+      213: 21300026
+    second: Bandit Death_13
+  - first:
+      213: 21300028
+    second: Bandit Death_14
+  - first:
+      213: 21300030
+    second: Bandit Death_15
+  - first:
+      213: 21300032
+    second: Bandit Death_16
+  - first:
+      213: 21300034
+    second: Bandit Death_17
+  - first:
+      213: 21300036
+    second: Bandit Death_18
+  - first:
+      213: 21300038
+    second: Bandit Death_19
+  - first:
+      213: 21300040
+    second: Bandit Death_20
+  - first:
+      213: 21300042
+    second: Bandit Death_21
+  - first:
+      213: 21300044
+    second: Bandit Death_22
+  - first:
+      213: 21300046
+    second: Bandit Death_23
+  - first:
+      213: 21300048
+    second: Bandit Death_24
+  - first:
+      213: 21300050
+    second: Bandit Death_25
+  - first:
+      213: 21300052
+    second: Bandit Death_26
+  - first:
+      213: 21300054
+    second: Bandit Death_27
+  - first:
+      213: 21300056
+    second: Bandit Death_28
+  - first:
+      213: 21300058
+    second: Bandit Death_29
+  - first:
+      213: 21300060
+    second: Bandit Death_30
+  - first:
+      213: 21300062
+    second: Bandit Death_31
+  - first:
+      213: 21300064
+    second: Bandit Death_32
+  - first:
+      213: 21300066
+    second: Bandit Death_33
+  - first:
+      213: 21300068
+    second: Bandit Death_34
+  - first:
+      213: 21300070
+    second: Bandit Death_35
+  - first:
+      213: 21300072
+    second: Bandit Death_36
+  - first:
+      213: 21300074
+    second: Bandit Death_37
+  - first:
+      213: 21300076
+    second: Bandit Death_38
+  - first:
+      213: 21300078
+    second: Bandit Death_39
+  - first:
+      213: 21300080
+    second: Bandit Death_40
   externalObjects: {}
-  serializedVersion: 7
+  serializedVersion: 12
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -64,6 +146,8 @@ TextureImporter:
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -72,9 +156,9 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: -1
-    aniso: -1
-    mipBias: -100
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
     wrapU: 1
     wrapV: 1
     wrapW: 1
@@ -95,11 +179,16 @@ TextureImporter:
   textureType: 8
   textureShape: 1
   singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
   maxTextureSizeSet: 0
   compressionQualitySet: 0
   textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 1
+  cookieLightType: 1
   platformSettings:
-  - serializedVersion: 2
+  - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -110,7 +199,8 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
-  - serializedVersion: 2
+    forceMaximumCompressionQuality_BC6H_BC7: 1
+  - serializedVersion: 3
     buildTarget: Standalone
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -121,7 +211,8 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
-  - serializedVersion: 2
+    forceMaximumCompressionQuality_BC6H_BC7: 1
+  - serializedVersion: 3
     buildTarget: WebGL
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -132,6 +223,19 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 1
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 1
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -151,6 +255,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: 155332c16053394449acac8f538640ea
+      internalID: 21300000
       vertices: []
       indices: 
       edges: []
@@ -171,6 +276,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: 278cb8ff8ee667e41b0f504a27b03365
+      internalID: 21300002
       vertices: []
       indices: 
       edges: []
@@ -191,6 +297,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: 5b48f8e438371d44aa1a808455664ff8
+      internalID: 21300004
       vertices: []
       indices: 
       edges: []
@@ -211,6 +318,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: 652ad878ad91cce42828fa7ac87fd9bb
+      internalID: 21300006
       vertices: []
       indices: 
       edges: []
@@ -231,6 +339,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: 022f6a1f4d5d75549a156070b8ffdd2f
+      internalID: 21300008
       vertices: []
       indices: 
       edges: []
@@ -251,6 +360,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: 842da971e798a2d4c961fb2f7d38331c
+      internalID: 21300010
       vertices: []
       indices: 
       edges: []
@@ -271,6 +381,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: 28ce1fb8d41d21e4fa6f401ceeaaadaf
+      internalID: 21300012
       vertices: []
       indices: 
       edges: []
@@ -291,6 +402,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: 46a8f6716e0627d4bbcf84e421ba5b6f
+      internalID: 21300014
       vertices: []
       indices: 
       edges: []
@@ -311,6 +423,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: b78b6247d97f77c47b6d5a4feab6b6af
+      internalID: 21300016
       vertices: []
       indices: 
       edges: []
@@ -331,6 +444,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: 3a1bacda636fd5c40be709fbc07bb8ba
+      internalID: 21300018
       vertices: []
       indices: 
       edges: []
@@ -351,6 +465,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: fac45e8b384734b4bb3e29bbe457f5e9
+      internalID: 21300020
       vertices: []
       indices: 
       edges: []
@@ -371,6 +486,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: a93f2b9475f510e408855e5c13e045bf
+      internalID: 21300022
       vertices: []
       indices: 
       edges: []
@@ -391,6 +507,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: e7c2d530326963f44b0475ae9c6e8a4e
+      internalID: 21300024
       vertices: []
       indices: 
       edges: []
@@ -411,6 +528,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: 9117a5f2e4dafa742bb869325ed29a27
+      internalID: 21300026
       vertices: []
       indices: 
       edges: []
@@ -431,6 +549,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: b7f468609e74e124aad8561a8f04696e
+      internalID: 21300028
       vertices: []
       indices: 
       edges: []
@@ -451,6 +570,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: 61ed5a3d3ed58404687958abb1f72826
+      internalID: 21300030
       vertices: []
       indices: 
       edges: []
@@ -471,6 +591,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: 11bc6e8d9476c774da3b9402a5e5fc2a
+      internalID: 21300032
       vertices: []
       indices: 
       edges: []
@@ -491,6 +612,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: a35f6a5b0429be747bdd7d6697c8ce7f
+      internalID: 21300034
       vertices: []
       indices: 
       edges: []
@@ -511,6 +633,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: b5f739d57bcfd124dbf1bcda5255e128
+      internalID: 21300036
       vertices: []
       indices: 
       edges: []
@@ -531,6 +654,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: 947119de23680de4eb9028a1c6eacc53
+      internalID: 21300038
       vertices: []
       indices: 
       edges: []
@@ -551,6 +675,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: 03c11d0e0f97c9a4988ffaf1f44389e3
+      internalID: 21300040
       vertices: []
       indices: 
       edges: []
@@ -571,6 +696,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: b5021010c514bc04fa21f2cc843f3e6d
+      internalID: 21300042
       vertices: []
       indices: 
       edges: []
@@ -591,6 +717,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: 99f603ac68ae44f48b8fbe35b35105cc
+      internalID: 21300044
       vertices: []
       indices: 
       edges: []
@@ -611,6 +738,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: 4e474512c46cd0c478e6c0bce0aa8b00
+      internalID: 21300046
       vertices: []
       indices: 
       edges: []
@@ -631,6 +759,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: 176c9f18155041e4dafe2ccbce0ffa37
+      internalID: 21300048
       vertices: []
       indices: 
       edges: []
@@ -651,6 +780,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: 52959d4c656a6e74386f732dd9d220cb
+      internalID: 21300050
       vertices: []
       indices: 
       edges: []
@@ -671,6 +801,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: bf831e51906a24c458b31b4dd0f34a23
+      internalID: 21300052
       vertices: []
       indices: 
       edges: []
@@ -691,6 +822,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: 919f45e8013dd7e47a5a3ae02a7a1f64
+      internalID: 21300054
       vertices: []
       indices: 
       edges: []
@@ -711,6 +843,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: 5d3028ba1bac38144b3b22497547a3c6
+      internalID: 21300056
       vertices: []
       indices: 
       edges: []
@@ -731,6 +864,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: be3c3d73998dbc545b9db40f039f0433
+      internalID: 21300058
       vertices: []
       indices: 
       edges: []
@@ -751,6 +885,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: 43ed71716822d8744b0fb934ef6252f3
+      internalID: 21300060
       vertices: []
       indices: 
       edges: []
@@ -771,6 +906,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: 413b55bc5b79ee34caa0a2069d73497a
+      internalID: 21300062
       vertices: []
       indices: 
       edges: []
@@ -791,6 +927,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: 45fffd342c37f4d4da614053561c6b70
+      internalID: 21300064
       vertices: []
       indices: 
       edges: []
@@ -811,6 +948,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: 8f4f8a9353d570b468e511f0ec98d28f
+      internalID: 21300066
       vertices: []
       indices: 
       edges: []
@@ -831,6 +969,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: 9ccd6b035e0f89c439898ddcbc6d218d
+      internalID: 21300068
       vertices: []
       indices: 
       edges: []
@@ -851,6 +990,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: c31c91f2c2aa3e740b03bbc7e22d681f
+      internalID: 21300070
       vertices: []
       indices: 
       edges: []
@@ -871,6 +1011,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: 86dcf45749e310849a20c8ac058fe1c0
+      internalID: 21300072
       vertices: []
       indices: 
       edges: []
@@ -891,6 +1032,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: 355be20d6f733834cbdff8b3335870c7
+      internalID: 21300074
       vertices: []
       indices: 
       edges: []
@@ -911,6 +1053,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: 85e64218869cc7444a651cf1c771d1bf
+      internalID: 21300076
       vertices: []
       indices: 
       edges: []
@@ -931,6 +1074,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: 028fc89cfe5a38f49a8915aa420f0e63
+      internalID: 21300078
       vertices: []
       indices: 
       edges: []
@@ -951,6 +1095,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: 76f15ff0312172d4aae130c01d7f470f
+      internalID: 21300080
       vertices: []
       indices: 
       edges: []
@@ -959,10 +1104,54 @@ TextureImporter:
     physicsShape: []
     bones: []
     spriteID: 14ca41abaff41784380fb585ecc9f890
+    internalID: 0
     vertices: []
     indices: 
     edges: []
     weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Bandit Death_0: 21300000
+      Bandit Death_1: 21300002
+      Bandit Death_10: 21300020
+      Bandit Death_11: 21300022
+      Bandit Death_12: 21300024
+      Bandit Death_13: 21300026
+      Bandit Death_14: 21300028
+      Bandit Death_15: 21300030
+      Bandit Death_16: 21300032
+      Bandit Death_17: 21300034
+      Bandit Death_18: 21300036
+      Bandit Death_19: 21300038
+      Bandit Death_2: 21300004
+      Bandit Death_20: 21300040
+      Bandit Death_21: 21300042
+      Bandit Death_22: 21300044
+      Bandit Death_23: 21300046
+      Bandit Death_24: 21300048
+      Bandit Death_25: 21300050
+      Bandit Death_26: 21300052
+      Bandit Death_27: 21300054
+      Bandit Death_28: 21300056
+      Bandit Death_29: 21300058
+      Bandit Death_3: 21300006
+      Bandit Death_30: 21300060
+      Bandit Death_31: 21300062
+      Bandit Death_32: 21300064
+      Bandit Death_33: 21300066
+      Bandit Death_34: 21300068
+      Bandit Death_35: 21300070
+      Bandit Death_36: 21300072
+      Bandit Death_37: 21300074
+      Bandit Death_38: 21300076
+      Bandit Death_39: 21300078
+      Bandit Death_4: 21300008
+      Bandit Death_40: 21300080
+      Bandit Death_5: 21300010
+      Bandit Death_6: 21300012
+      Bandit Death_7: 21300014
+      Bandit Death_8: 21300016
+      Bandit Death_9: 21300018
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

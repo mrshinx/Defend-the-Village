@@ -1,7 +1,10 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Net.NetworkInformation;
+using System.Xml.Linq;
 using UnityEngine;
 using UnityEngine.UI;
+using static ResearchNode;
 
 public class ResearchManager : MonoBehaviour {
 
@@ -28,20 +31,37 @@ public class ResearchManager : MonoBehaviour {
 
     }
 
-    public void Projectile_Damage(float value, GameObject node, bool respect)
+    public void Add_Bonus(NodeType nodeType, float magnitude)
     {
-        TowerSelector.currentTarget.GetComponent<ResearchBonus>().Projectile_Damage += value;
-        if (!respect)
-            TowerSelector.currentTarget.GetComponent<TowerProperties>().activeResearch.Add(node);
-        else
-            TowerSelector.currentTarget.GetComponent<TowerProperties>().activeResearch.Remove(node);
+        TowerProperties propCache = TowerSelector.currentTarget.GetComponent<TowerProperties>();
+        switch (nodeType)
+        {
+            case NodeType.ProjectileDamage:
+                propCache.bonusDamageResearch += magnitude;
+                break;
+        }
+
+        propCache.CalculateFinalStat();
+    }
+
+    public void Remove_Bonus(NodeType nodeType, float magnitude)
+    {
+        TowerProperties propCache = TowerSelector.currentTarget.GetComponent<TowerProperties>();
+        switch (nodeType)
+        {
+            case NodeType.ProjectileDamage:
+                propCache.bonusDamageResearch -= magnitude;
+                break;
+        }
+
+        propCache.CalculateFinalStat();
     }
 
     public void RedrawNodes()
     {
         foreach (GameObject node in TowerSelector.currentTarget.GetComponent<TowerProperties>().activeResearch)
         {
-            node.GetComponent<ProjectileDamage>().ReColor();
+            node.GetComponent<ResearchNode>().ReColor();
         }
     }
 

@@ -6,29 +6,24 @@ using UnityEngine.UI;
 
 public class Path : MonoBehaviour {
 
-    public GameObject firstNode;
-    public GameObject secondNode;
-    Image firstNodeColorCache;
-    Image secondNodeColorCache;
-    Image ColorCache;
-    Color originalColor;
+    public ResearchNode firstNode;
+    public ResearchNode secondNode;
 
-	void Start () {
-        firstNodeColorCache = firstNode.GetComponent<Image>();
-        secondNodeColorCache = secondNode.GetComponent<Image>();
-        ColorCache = gameObject.GetComponent<Image>();
-        originalColor = ColorCache.color;
-    }
-	
 	// Update is called once per frame
 	void Update () {
 
-        if (firstNodeColorCache.color.a == secondNodeColorCache.color.a)
+        if (firstNode.active && secondNode.active)
         {
-            Color tmp = firstNodeColorCache.color;
-            ColorCache.color = tmp;
+            Color tmp = gameObject.GetComponent<Image>().color;
+            tmp.a = 1f;
+            gameObject.GetComponent<Image>().color = tmp; // brighten color
         }
-        else ColorCache.color = originalColor;
+        else
+        {
+            Color tmp = gameObject.GetComponent<Image>().color;
+            tmp.a = 0.5f;
+            gameObject.GetComponent<Image>().color = tmp; // darken color
+        }
 
 	}
 }

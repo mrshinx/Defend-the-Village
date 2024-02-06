@@ -78,7 +78,7 @@ public class AuraInformation : MonoBehaviour {
                 if (debuffCount == 0)
                 {
                     GameObject newDebuff = Instantiate(gameObject, target.transform.position, Quaternion.identity);
-                    newDebuff.transform.parent = target.transform;
+                    newDebuff.transform.SetParent(target.transform);
                 }
             }
     }

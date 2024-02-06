@@ -28,13 +28,6 @@ public class Tooltip : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
     bool tooltipHidden = true;
     bool selecting = false;
 
-    float HP;
-    float maxHP;
-    float armor;
-    float coldResistance;
-    float lightningResistance;
-    float fireResistance;
-
     Text tooltiptext;
     Text tooltipname;
     Image tooltipImage;
@@ -135,13 +128,14 @@ public class Tooltip : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
                 tooltip.transform.position = transform.parent.transform.position;
                 break;
             case tooltipTypes.Monster:
-                HP = (float)System.Math.Round(gameObject.GetComponent<Monster>().currentHP,1);
-                maxHP = gameObject.GetComponent<Monster>().HP;
-                armor = gameObject.GetComponent<Defense>().armor;
-                coldResistance = gameObject.GetComponent<Defense>().coldResist;
-                lightningResistance = gameObject.GetComponent<Defense>().lightningResist;
-                fireResistance = gameObject.GetComponent<Defense>().fireResist;
-                tooltiptext.text = Name + "\n\n" + "HP: " + HP + "/" + maxHP + "\n" + "Armor: " + armor + "\n" + "Cold Resistance: " + coldResistance*100 +"%" + "\n" + "Lightning Resistance: " + lightningResistance*100 + "%" + "\n" + "Fire Resistance: " + fireResistance * 100 + "%";
+                Rarity rarity = gameObject.GetComponent<Monster>().rarity.rarity;
+                float HP = (float)System.Math.Round(gameObject.GetComponent<Monster>().currentHP,1);
+                float maxHP = gameObject.GetComponent<Monster>().maxHP;
+                float armor = gameObject.GetComponent<Defense>().armor;
+                float coldResistance = gameObject.GetComponent<Defense>().coldResist;
+                float lightningResistance = gameObject.GetComponent<Defense>().lightningResist;
+                float fireResistance = gameObject.GetComponent<Defense>().fireResist;
+                tooltiptext.text = rarity + " " +Name + "\n\n" + "HP: " + HP + "/" + maxHP + "\n" + "Armor: " + armor + "\n" + "Cold Resistance: " + coldResistance*100 +"%" + "\n" + "Lightning Resistance: " + lightningResistance*100 + "%" + "\n" + "Fire Resistance: " + fireResistance * 100 + "%";
                 tooltip.transform.position = transform.position;
                 Invoke("DisplayAura", 0.02f);
                 break;

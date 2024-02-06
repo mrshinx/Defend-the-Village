@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -42,7 +43,6 @@ public class Defense : MonoBehaviour {
     public void DamageCalc(float rawDamage, int damageType, float dmgAmp, float armorPen)
     {
         damageReduction = (1f - (0.01f * (armor-armorPen)) / (0.9f + 0.05f * (armor - armorPen)));
-
         switch (damageType)
         {
             case 0:

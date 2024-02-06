@@ -5,51 +5,46 @@ using UnityEngine;
 
 public class Spawn : MonoBehaviour {
 
-    bool spawn = true;
     public bool startSpawn = false;
     [SerializeField] float maxDelay;
     [SerializeField] float minDelay;
-    [SerializeField] GameObject monster;
-    public float monsterAmount;
-    float baseMonsterAmount;
-    List<GameObject> remainingMonster = new List<GameObject>();
+    [SerializeField] GameObject enemyPrefab;
+    float amountToSpawn;
+    List<GameObject> spawnedEnemy = new List<GameObject>();
 
 	// Use this for initialization
-	IEnumerator Start () {
-        monsterAmount = WaveController.currentMonsterAmount;
-        WaveController.currentAliveMonster += monsterAmount;
-        while (spawn)
-        {
-            yield return new WaitForSeconds(UnityEngine.Random.Range(minDelay, maxDelay));
-            if(monsterAmount >0)
-            SpawnMonster();
-        }
-	}
-
-    private void SpawnMonster()
+    private IEnumerator SpawnMonster()
     {
-        monster.transform.localScale = new Vector2(-1f, 1f);
-        GameObject tempMonster = Instantiate(monster, transform.position, transform.rotation);
-        remainingMonster.Add(tempMonster);
-        monsterAmount -= 1;
+        enemyPrefab.transform.localScale = new Vector2(-1f, 1f);
+        while (amountToSpawn > 0)
+        {
+            GameObject tempEnemy = Instantiate(enemyPrefab, transform.position, transform.rotation);
+            spawnedEnemy.Add(tempEnemy);
+            amountToSpawn -= 1;
+            yield return new WaitForSeconds(UnityEngine.Random.Range(minDelay, maxDelay));
+        }
     }
 
     // Update is called once per frame
-    void Update () {
-        baseMonsterAmount = WaveController.currentMonsterAmount;
-        foreach (GameObject Monster in remainingMonster)
-        {
-            if (Monster == null)
-            {
-                remainingMonster.Remove(Monster);
-                WaveController.currentAliveMonster -= 1;
-            }
-        }
+    void Update () 
+    {
+        // Check for spawn flag and start spawning enemies
         if (startSpawn)
         {
-            monsterAmount = baseMonsterAmount;
-            WaveController.currentAliveMonster += monsterAmount;
             startSpawn = false;
+            amountToSpawn = WaveController.currentWaveEnemyAmount;
+            WaveController.currentWaveRemainingEnemy += amountToSpawn;
+            StartCoroutine(SpawnMonster());
+        }
+
+        // Check for dead enemies
+        foreach (GameObject enemy in spawnedEnemy)
+        {
+            if (enemy == null)
+            {
+                spawnedEnemy.Remove(enemy);
+                WaveController.currentWaveRemainingEnemy -= 1;
+            }
         }
 	}
 }

@@ -19,11 +19,11 @@ public class DrawBezierExample : Editor
 
     void OnEnable()
     {
-        SceneView.onSceneGUIDelegate += OnSceneViewGUI;
+        SceneView.duringSceneGui += OnSceneViewGUI;
     }
 
     void OnDisable()
     {
-        SceneView.onSceneGUIDelegate -= OnSceneViewGUI;
+        SceneView.duringSceneGui -= OnSceneViewGUI;
     }
 }

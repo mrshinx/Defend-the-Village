@@ -44,7 +44,7 @@ public class TowerSpawn : MonoBehaviour {
     {
         tower = Instantiate(towerList[towerIndex], transform.position + new Vector3(0, 0, -1), Quaternion.identity);
         tower.transform.parent = gameObject.transform;
-
+        TowerUpgrade.currentTowerList.Add(tower);
     }
 
     public void OnMouseOver()

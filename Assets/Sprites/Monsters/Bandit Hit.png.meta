@@ -1,39 +1,99 @@
 fileFormatVersion: 2
 guid: 44de1db4996c25d499b10b1a25ea3044
 TextureImporter:
-  fileIDToRecycleName:
-    21300000: Bandit Hit_0
-    21300002: Bandit Hit_1
-    21300004: Bandit Hit_2
-    21300006: Bandit Hit_3
-    21300008: Bandit Hit_4
-    21300010: Bandit Hit_5
-    21300012: Bandit Hit_6
-    21300014: Bandit Hit_7
-    21300016: Bandit Hit_8
-    21300018: Bandit Hit_9
-    21300020: Bandit Hit_10
-    21300022: Bandit Hit_11
-    21300024: Bandit Hit_12
-    21300026: Bandit Hit_13
-    21300028: Bandit Hit_14
-    21300030: Bandit Hit_15
-    21300032: Bandit Hit_16
-    21300034: Bandit Hit_17
-    21300036: Bandit Hit_18
-    21300038: Bandit Hit_19
-    21300040: Bandit Hit_20
-    21300042: Bandit Hit_21
-    21300044: Bandit Hit_22
-    21300046: Bandit Hit_23
-    21300048: Bandit Hit_24
-    21300050: Bandit Hit_25
-    21300052: Bandit Hit_26
-    21300054: Bandit Hit_27
-    21300056: Bandit Hit_28
-    21300058: Bandit Hit_29
+  internalIDToNameTable:
+  - first:
+      213: 21300000
+    second: Bandit Hit_0
+  - first:
+      213: 21300002
+    second: Bandit Hit_1
+  - first:
+      213: 21300004
+    second: Bandit Hit_2
+  - first:
+      213: 21300006
+    second: Bandit Hit_3
+  - first:
+      213: 21300008
+    second: Bandit Hit_4
+  - first:
+      213: 21300010
+    second: Bandit Hit_5
+  - first:
+      213: 21300012
+    second: Bandit Hit_6
+  - first:
+      213: 21300014
+    second: Bandit Hit_7
+  - first:
+      213: 21300016
+    second: Bandit Hit_8
+  - first:
+      213: 21300018
+    second: Bandit Hit_9
+  - first:
+      213: 21300020
+    second: Bandit Hit_10
+  - first:
+      213: 21300022
+    second: Bandit Hit_11
+  - first:
+      213: 21300024
+    second: Bandit Hit_12
+  - first:
+      213: 21300026
+    second: Bandit Hit_13
+  - first:
+      213: 21300028
+    second: Bandit Hit_14
+  - first:
+      213: 21300030
+    second: Bandit Hit_15
+  - first:
+      213: 21300032
+    second: Bandit Hit_16
+  - first:
+      213: 21300034
+    second: Bandit Hit_17
+  - first:
+      213: 21300036
+    second: Bandit Hit_18
+  - first:
+      213: 21300038
+    second: Bandit Hit_19
+  - first:
+      213: 21300040
+    second: Bandit Hit_20
+  - first:
+      213: 21300042
+    second: Bandit Hit_21
+  - first:
+      213: 21300044
+    second: Bandit Hit_22
+  - first:
+      213: 21300046
+    second: Bandit Hit_23
+  - first:
+      213: 21300048
+    second: Bandit Hit_24
+  - first:
+      213: 21300050
+    second: Bandit Hit_25
+  - first:
+      213: 21300052
+    second: Bandit Hit_26
+  - first:
+      213: 21300054
+    second: Bandit Hit_27
+  - first:
+      213: 21300056
+    second: Bandit Hit_28
+  - first:
+      213: 21300058
+    second: Bandit Hit_29
   externalObjects: {}
-  serializedVersion: 7
+  serializedVersion: 12
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -53,6 +113,8 @@ TextureImporter:
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -61,9 +123,9 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: -1
-    aniso: -1
-    mipBias: -100
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
     wrapU: 1
     wrapV: 1
     wrapW: 1
@@ -84,11 +146,16 @@ TextureImporter:
   textureType: 8
   textureShape: 1
   singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
   maxTextureSizeSet: 0
   compressionQualitySet: 0
   textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 1
+  cookieLightType: 1
   platformSettings:
-  - serializedVersion: 2
+  - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -99,7 +166,8 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
-  - serializedVersion: 2
+    forceMaximumCompressionQuality_BC6H_BC7: 1
+  - serializedVersion: 3
     buildTarget: Standalone
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -110,7 +178,8 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
-  - serializedVersion: 2
+    forceMaximumCompressionQuality_BC6H_BC7: 1
+  - serializedVersion: 3
     buildTarget: WebGL
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -121,6 +190,19 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 1
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 1
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -140,6 +222,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: 0ee31d914bf20cc4880482ad10aafcf7
+      internalID: 21300000
       vertices: []
       indices: 
       edges: []
@@ -160,6 +243,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: 9e0e8686a6d9b6d47b9837e0a8697efd
+      internalID: 21300002
       vertices: []
       indices: 
       edges: []
@@ -180,6 +264,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: c309617db4ea81a4ca7c0e4d54e58a81
+      internalID: 21300004
       vertices: []
       indices: 
       edges: []
@@ -200,6 +285,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: 2dc9075b2b6f4f84289322c0fbe8f050
+      internalID: 21300006
       vertices: []
       indices: 
       edges: []
@@ -220,6 +306,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: 57fee76ff29cfe845a70e01d8ba2a32a
+      internalID: 21300008
       vertices: []
       indices: 
       edges: []
@@ -240,6 +327,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: c43db8740b8715445807db3e193bdb26
+      internalID: 21300010
       vertices: []
       indices: 
       edges: []
@@ -260,6 +348,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: cf04bf90d7894934f8bf14211f744fe2
+      internalID: 21300012
       vertices: []
       indices: 
       edges: []
@@ -280,6 +369,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: 9a337dd3aea7a364984739e9e9e67a79
+      internalID: 21300014
       vertices: []
       indices: 
       edges: []
@@ -300,6 +390,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: 555892731b2781b49a56ce5670950479
+      internalID: 21300016
       vertices: []
       indices: 
       edges: []
@@ -320,6 +411,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: 55dd80f687632fa47a3d6e54d359ed3c
+      internalID: 21300018
       vertices: []
       indices: 
       edges: []
@@ -340,6 +432,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: 2e3c81fdb427cdb4b9c26edd7bbcc77f
+      internalID: 21300020
       vertices: []
       indices: 
       edges: []
@@ -360,6 +453,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: 3eec9259486939646aee369bcaf9b584
+      internalID: 21300022
       vertices: []
       indices: 
       edges: []
@@ -380,6 +474,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: 9fdc891c6cbb4b9459a5566668e083cf
+      internalID: 21300024
       vertices: []
       indices: 
       edges: []
@@ -400,6 +495,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: 23ec51621dd48684fa350f0349fac018
+      internalID: 21300026
       vertices: []
       indices: 
       edges: []
@@ -420,6 +516,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: c86a88f836b467944832eac413f609dc
+      internalID: 21300028
       vertices: []
       indices: 
       edges: []
@@ -440,6 +537,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: a9cca3045df29b440b17c2a0746614f3
+      internalID: 21300030
       vertices: []
       indices: 
       edges: []
@@ -460,6 +558,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: e2117dc4af590b847ac68870b308e209
+      internalID: 21300032
       vertices: []
       indices: 
       edges: []
@@ -480,6 +579,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: 1ab08b6122bedf54e95daf93ebca0a8d
+      internalID: 21300034
       vertices: []
       indices: 
       edges: []
@@ -500,6 +600,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: b54c314e0ff4be646b83eadcc0bd3ba9
+      internalID: 21300036
       vertices: []
       indices: 
       edges: []
@@ -520,6 +621,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: cc00569823fba7349b0be9fa811cf6fd
+      internalID: 21300038
       vertices: []
       indices: 
       edges: []
@@ -540,6 +642,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: b249faba9021c744bbf6fe3850f67654
+      internalID: 21300040
       vertices: []
       indices: 
       edges: []
@@ -560,6 +663,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: 21095d94711a43842af8880cae2ffd5e
+      internalID: 21300042
       vertices: []
       indices: 
       edges: []
@@ -580,6 +684,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: e9155e53d4d1cb1449a98ca6694ec229
+      internalID: 21300044
       vertices: []
       indices: 
       edges: []
@@ -600,6 +705,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: ad2519c8b380547478e582793e5870a0
+      internalID: 21300046
       vertices: []
       indices: 
       edges: []
@@ -620,6 +726,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: 26d03bc4bc5daba459597965412d4aae
+      internalID: 21300048
       vertices: []
       indices: 
       edges: []
@@ -640,6 +747,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: 89fe70a15f1833047813ad131de44f50
+      internalID: 21300050
       vertices: []
       indices: 
       edges: []
@@ -660,6 +768,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: a5b214f9eb3906d40bd08e560db17cc0
+      internalID: 21300052
       vertices: []
       indices: 
       edges: []
@@ -680,6 +789,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: dd0926bc088fc2d49989f26c185eb413
+      internalID: 21300054
       vertices: []
       indices: 
       edges: []
@@ -700,6 +810,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: 22fefe07ab0109644a88aa168dc13c4f
+      internalID: 21300056
       vertices: []
       indices: 
       edges: []
@@ -720,6 +831,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: 7b2dc9d9631c98d4184844c99bcedf66
+      internalID: 21300058
       vertices: []
       indices: 
       edges: []
@@ -728,10 +840,43 @@ TextureImporter:
     physicsShape: []
     bones: []
     spriteID: 7f1efd6ef219b0d45b3a8713088cb6e0
+    internalID: 0
     vertices: []
     indices: 
     edges: []
     weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Bandit Hit_0: 21300000
+      Bandit Hit_1: 21300002
+      Bandit Hit_10: 21300020
+      Bandit Hit_11: 21300022
+      Bandit Hit_12: 21300024
+      Bandit Hit_13: 21300026
+      Bandit Hit_14: 21300028
+      Bandit Hit_15: 21300030
+      Bandit Hit_16: 21300032
+      Bandit Hit_17: 21300034
+      Bandit Hit_18: 21300036
+      Bandit Hit_19: 21300038
+      Bandit Hit_2: 21300004
+      Bandit Hit_20: 21300040
+      Bandit Hit_21: 21300042
+      Bandit Hit_22: 21300044
+      Bandit Hit_23: 21300046
+      Bandit Hit_24: 21300048
+      Bandit Hit_25: 21300050
+      Bandit Hit_26: 21300052
+      Bandit Hit_27: 21300054
+      Bandit Hit_28: 21300056
+      Bandit Hit_29: 21300058
+      Bandit Hit_3: 21300006
+      Bandit Hit_4: 21300008
+      Bandit Hit_5: 21300010
+      Bandit Hit_6: 21300012
+      Bandit Hit_7: 21300014
+      Bandit Hit_8: 21300016
+      Bandit Hit_9: 21300018
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

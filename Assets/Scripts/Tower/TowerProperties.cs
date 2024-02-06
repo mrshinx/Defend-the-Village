@@ -16,23 +16,41 @@ public class TowerProperties : MonoBehaviour {
     public List<GameObject> debuffs;
     public List<GameObject> learnedDebuffs;
     public GameObject learnedDebuff;
+    public List<AuraObject> _debuffs;
     public List<GameObject> activeResearch;
+
     public int cost;
-    public float dmgAmp;
+    [System.NonSerialized]
+    public float dmgAmp = 1f;
     public float armorPen;
+
     public float baseAttackSpeed;
+    [System.NonSerialized]
     public float attackSpeed;
     float bonusAttackSpeedLvl;
+
     public float baseDamage;
+    [System.NonSerialized]
     public float damage;
     float bonusDamageLvl;
+    public float bonusDamageResearch;
+
     public float baseCritChance;
+    [System.NonSerialized]
     public float critChance;
     float bonusCritChanceLvl;
+
     public float baseCritMulti;
+    [System.NonSerialized]
     public float critMulti;
     float bonusCritMultiLvl;
+
+    [System.NonSerialized]
+    public float baseManaCost;
+    public float ManaCost;
+    float bonusManaCost;
     public float projectileSpeed;
+    public float attackRange;
     public float aoe;
     public float knockbackX;
     public float knockbackY;
@@ -44,11 +62,20 @@ public class TowerProperties : MonoBehaviour {
     public float level;
     public bool upgrade;
     public bool caster;
+    public bool auraTower;
+
+    // Special bonus
+    public bool canChain = false;
+    public int chainCount;
+    public int projectileCount;
+    public float repeatChance;
+
     GameObject selector;
     GameObject passiveDatabase;
     [SerializeField] GameObject levelUpVFX;
     public GameObject infuseShadow;
     public GameObject infuseFire;
+    public List<GameObject> infuseList;
     [SerializeField] AudioClip levelUpSound;
 
     // Use this for initialization
@@ -64,7 +91,10 @@ public class TowerProperties : MonoBehaviour {
             attackSpeed = baseAttackSpeed;
             critChance = baseCritChance;
             critMulti = baseCritMulti;
-        }
+
+            CalculateFinalStat();
+            CalculateUpgrade();
+}
         
         selector = GameObject.FindWithTag("Tower Selector");
         passiveDatabase = GameObject.Find("Passive Database");
@@ -74,7 +104,7 @@ public class TowerProperties : MonoBehaviour {
         {
             debuffs.Add(passiveDatabase.GetComponent<PassiveDatabase>().PassivesInfo[a]);
             learnedDebuff = Instantiate(debuffs[a],transform.position,Quaternion.identity);
-            learnedDebuff.transform.parent = transform;
+            learnedDebuff.transform.SetParent(transform);
             learnedDebuffs.Add(learnedDebuff);
         }
 
@@ -108,21 +138,14 @@ public class TowerProperties : MonoBehaviour {
         currentEXPCap = currentEXPCap *1.1f;
         percentEXP = EXP / currentEXPCap;
 
-        bonusDamageLvl += gameObject.GetComponent<StatGrowth>().bonusDamageLvl;
-        damage = baseDamage * (1 + bonusDamageLvl);
+        var _cacheStatGrowth = gameObject.GetComponent<StatGrowth>();
 
-        bonusAttackSpeedLvl += gameObject.GetComponent<StatGrowth>().bonusAttackSpeedLvl;
-        attackSpeed = baseAttackSpeed /(1 + bonusAttackSpeedLvl);
+        bonusDamageLvl += _cacheStatGrowth.bonusDamageLvl;
+        bonusAttackSpeedLvl += _cacheStatGrowth.bonusAttackSpeedLvl;
+        bonusCritChanceLvl += _cacheStatGrowth.bonusCritChanceLvl;
+        bonusCritMultiLvl += _cacheStatGrowth.bonusCritMultiLvl;
 
-        bonusCritChanceLvl += gameObject.GetComponent<StatGrowth>().bonusCritChanceLvl;
-        critChance = baseCritChance + baseCritChance*bonusCritChanceLvl;
-
-        bonusCritMultiLvl += gameObject.GetComponent<StatGrowth>().bonusCritMultiLvl;
-        critMulti = baseCritMulti + bonusCritMultiLvl;
-
-        gameObject.GetComponent<Mana>().maximumMana = gameObject.GetComponent<Mana>().basemaximumMana + gameObject.GetComponent<StatGrowth>().bonusManaLvl;
-        gameObject.GetComponent<Mana>().manaRegen = gameObject.GetComponent<Mana>().basemanaRegen*(1+ gameObject.GetComponent<StatGrowth>().bonusManaRegenLvl*(level-1));
-
+        CalculateFinalStat();
         if (isSelected) UpdateInfo();
 
     }
@@ -143,21 +166,17 @@ public class TowerProperties : MonoBehaviour {
         EXP = iniEXP;
         percentEXP = EXP / currentEXPCap;
 
-        bonusDamageLvl += gameObject.GetComponent<StatGrowth>().bonusDamageLvl * (level-1);
-        damage = baseDamage * (1 + bonusDamageLvl);
+        var _cacheStatGrowth = gameObject.GetComponent<StatGrowth>();
 
-        bonusAttackSpeedLvl += gameObject.GetComponent<StatGrowth>().bonusAttackSpeedLvl * (level - 1);
-        attackSpeed = baseAttackSpeed / (1 + bonusAttackSpeedLvl);
+        bonusDamageLvl += _cacheStatGrowth.bonusDamageLvl * (level-1);
+        bonusAttackSpeedLvl += _cacheStatGrowth.bonusAttackSpeedLvl * (level - 1);
+        bonusCritChanceLvl += _cacheStatGrowth.bonusCritChanceLvl * (level - 1);
+        bonusCritMultiLvl += _cacheStatGrowth.bonusCritMultiLvl * (level - 1);
 
-        bonusCritChanceLvl += gameObject.GetComponent<StatGrowth>().bonusCritChanceLvl * (level - 1);
-        critChance = baseCritChance + baseCritChance * bonusCritChanceLvl;
-
-        bonusCritMultiLvl += gameObject.GetComponent<StatGrowth>().bonusCritMultiLvl * (level - 1);
-        critMulti = baseCritMulti + bonusCritMultiLvl;
-
+        CalculateFinalStat();
+        CalculateUpgrade();
         selector = GameObject.FindWithTag("Tower Selector");
         UpdateInfo();
-
     }
 
     public void UpdateInfo()
@@ -165,5 +184,29 @@ public class TowerProperties : MonoBehaviour {
         percentEXP = EXP / currentEXPCap;
         selector.GetComponent<TowerSelector>().TowerSelect(transform.gameObject, gameObject.GetComponent<SpriteRenderer>().sprite, towerName, percentEXP, level, damage, attackSpeed,
         critChance, critMulti, gameObject.GetComponent<Mana>().currentMana, gameObject.GetComponent<Mana>().maximumMana, learnedDebuffs);
+    }
+
+    public void CalculateFinalStat()
+    {
+        damage = baseDamage * (1 + bonusDamageLvl + bonusDamageResearch);
+
+        attackSpeed = baseAttackSpeed / (1 + bonusAttackSpeedLvl);
+
+        critChance = baseCritChance + baseCritChance * bonusCritChanceLvl;
+
+        critMulti = baseCritMulti + bonusCritMultiLvl;
+
+        var _cacheStatGrowth = gameObject.GetComponent<StatGrowth>();
+        var _cacheMana = gameObject.GetComponent<Mana>();
+        _cacheMana.maximumMana = _cacheMana.baseMaximumMana + _cacheStatGrowth.bonusManaLvl;
+        _cacheMana.manaRegen = _cacheMana.baseManaRegen * (1 + _cacheStatGrowth.bonusManaRegenLvl * (level - 1));
+    }
+
+    public void CalculateUpgrade()
+    {
+        chainCount = Mathf.FloorToInt(TowerUpgrade.chainCount);
+        projectileCount = Mathf.FloorToInt(TowerUpgrade.projectileCount);
+        repeatChance = TowerUpgrade.repeatChance;
+        gameObject.GetComponent<Attack>().CalculateUpgrade();
     }
 }

@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class WaveController : MonoBehaviour {
 
-    public static float currentWave;
-    float baseMonsterAmount;
-    public static float currentMonsterAmount;
-    public static float currentAliveMonster;
+    public static int currentWave;
+    float baseEnemyAmount;
+    public static float currentWaveEnemyAmount;
+    public static float currentWaveRemainingEnemy;
 
     [SerializeField] GameObject Lane1;
     [SerializeField] GameObject Lane2;
@@ -20,55 +20,57 @@ public class WaveController : MonoBehaviour {
 
     void Awake()
     {
-        currentWave = 1;
-        baseMonsterAmount = 3;
-        currentMonsterAmount = baseMonsterAmount;
+        currentWave = 0;
+        baseEnemyAmount = 3;
+        currentWaveEnemyAmount = baseEnemyAmount;
     }
 
-    void Start () {
-        
-	}
-	
 	// Update is called once per frame
 	void Update () {
-        if (currentAliveMonster == 0) 
+        if (currentWaveRemainingEnemy == 0) 
+        {
+            if (currentWave % 3  == 0)
             {
-                currentWave += 1;
-                currentMonsterAmount = Mathf.Floor(baseMonsterAmount + currentWave / 2f);
-                foreach (Transform lane in transform)
-                {
-                    lane.gameObject.GetComponent<Spawn>().startSpawn = true;
-                }
+                RandomUpgrade[] randomUpgrades = new RandomUpgrade[3] { new RandomUpgrade(), new RandomUpgrade(), new RandomUpgrade() };
+                TowerUpgrade towerUpgradeObj = GameObject.FindWithTag("Tower Selector").GetComponent<TowerUpgrade>();
+                towerUpgradeObj.GenerateRandomUpgradeButtons(randomUpgrades);
             }
+
+            currentWave += 1;
+            currentWaveEnemyAmount = Mathf.Floor(baseEnemyAmount + currentWave / 2f);
+            foreach (Transform lane in transform)
+            {
+                lane.gameObject.GetComponent<Spawn>().startSpawn = true;
+            }
+        }
 
         if (currentWave == 25)
-            {
-                Lane2.SetActive(true);
-                currentAliveMonster -= currentMonsterAmount;
-            }
+        {
+            Lane2.SetActive(true);
+        }
 
         if (currentWave == 50)
-            {
-                Lane3.SetActive(true);
-            }
+        {
+            Lane3.SetActive(true);
+        }
 
         if (currentWave == 100)
-            {
-                Lane4.SetActive(true);
-            }
+        {
+            Lane4.SetActive(true);
+        }
 
         if (currentWave == 200)
-            {
-                Lane5.SetActive(true);
-            }
+        {
+            Lane5.SetActive(true);
+        }
 
         if (currentWave == 400)
-            {
-                Lane6.SetActive(true);
-            }
+        {
+            Lane6.SetActive(true);
+        }
     }
 
-    public static float GetWave()
+    public static int GetWave()
     {
         return currentWave;
     }

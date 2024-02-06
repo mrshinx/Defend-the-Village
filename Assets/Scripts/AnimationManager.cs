@@ -3,8 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-public class CharDeath : MonoBehaviour {
-    int a;
+public class AnimationManager : MonoBehaviour {
 
 	void Start () {
 	}
@@ -14,7 +13,7 @@ public class CharDeath : MonoBehaviour {
 		
 	}
 
-    public static void DeathAnim(GameObject deadNPC, Transform deadPos, float time, AudioClip deathSound, float volume)
+    public static void PlayDeathAnimation(GameObject deadNPC, Transform deadPos, float time, AudioClip deathSound, float volume)
     {
         AudioSource.PlayClipAtPoint(deathSound, Camera.main.transform.position, volume);
         GameObject tempAnim = Instantiate(deadNPC, deadPos.position + new Vector3(0,0,-1), Quaternion.identity );

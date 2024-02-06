@@ -21,6 +21,7 @@ public class TowerSelector : MonoBehaviour {
     Sprite towerSprite;
     public static GameObject currentTarget;
     static GameObject lastTarget;
+    static Color lastColor;
     Text manatextCache;
     Mana manaCache;
 
@@ -58,15 +59,17 @@ public class TowerSelector : MonoBehaviour {
 
     {
         currentTarget = tower;
-        manaCache = currentTarget.gameObject.GetComponent<Mana>();
 
+        if (lastTarget != null)
+        {
+            lastTarget.GetComponent<SpriteRenderer>().color = lastColor; //Revert last target color
+            if (lastTarget != currentTarget) lastTarget.GetComponent<TowerProperties>().isSelected = false;
+        }
+
+        lastColor = currentTarget.GetComponent<SpriteRenderer>().color;
         currentTarget.GetComponent<SpriteRenderer>().color = new Color(0, 0.9245283f, 0.3235681f); //Make current target green
 
-        if ((lastTarget != null) && (lastTarget!= currentTarget))
-        {
-            lastTarget.GetComponent<SpriteRenderer>().color = new Color(1, 1, 1); //Revert last target color
-            lastTarget.GetComponent<TowerProperties>().isSelected = false;
-        }
+        manaCache = currentTarget.gameObject.GetComponent<Mana>();
 
         towerImage.GetComponent<Image>().sprite = towerSprite;  // Get tower image
         towerImage.GetComponent<Image>().enabled = true; // Enable tower image
@@ -106,7 +109,6 @@ public class TowerSelector : MonoBehaviour {
         }
 
         lastTarget = tower;
-
     }
 
     public void SellTower()

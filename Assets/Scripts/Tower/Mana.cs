@@ -5,16 +5,16 @@ using UnityEngine;
 public class Mana : MonoBehaviour {
 
     public float currentMana ;
-    public float basemaximumMana;
+    public float baseMaximumMana;
     public float maximumMana;
     public GameObject manaDisplay;
-    public float basemanaRegen;
+    public float baseManaRegen;
     public float manaRegen;
 
     void Start () {
 
-        maximumMana = basemaximumMana;
-        manaRegen = basemanaRegen;
+        maximumMana = baseMaximumMana;
+        manaRegen = baseManaRegen;
 
 	}
 	
