@@ -12,6 +12,6 @@ Game is in very early development stage.
 ![ezgif-4-45d96017a0](https://github.com/mrshinx/Defend-the-Village/assets/45674057/a996a1a2-bc61-4aa0-88d7-eb50d30efc79)
 ### Towers level up with enough battle experience
 ![image](https://github.com/mrshinx/Defend-the-Village/assets/45674057/7c1e639d-91f2-4d90-9888-e3e29064b05e)
-### Shape your play style with a research tree, focus on firepower or slowly killing your enemies
+### Shape your playstyle with a research tree, focus on firepower or slowly killing your enemies
 ![image](https://github.com/mrshinx/Defend-the-Village/assets/45674057/4ae801db-2de3-4629-9bc3-4ae77b750731)
 
